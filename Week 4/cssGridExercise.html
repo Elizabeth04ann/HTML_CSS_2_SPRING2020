@@ -4,47 +4,157 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Grid</title>
-
+ 
     <style>
-      /* Create custom classes for each example of assignment */
+      /* Creat custom classes for each example of assignment */
+
+      /* Creat a basic grid with no gaps */
+      .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        background-color: #bada55;
+        padding: 10px;
+      }
+      /* Creat a grid with gaps*/
+      .grid-container2 {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        background-color: yellow;
+        padding: 10px;
+        grid-gap: 20px
+      }
+      .grid-container3 {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        background-color: pink;
+        padding: 15px;
+        grid-gap: 15px;
+      }
+      .grid-container4 {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 30px auto auto auto;
+        background-color:aliceblue;
+        padding: 15px;
+        grid-gap: 15px;
+      }
+      /* Grid w/ another way to declare how many rows to go down */
+      .grid-container5 {
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        background-color:purple;
+        padding: 15px;
+        grid-gap: 15px;
+      }
+      .grid-item{
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0,0,0,0.8);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+      }
+      /* Create a grid w/ a defined column start and end using two lines of code (one for start and one for stop) */
+      .grid-item3{
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0,0,0,0.8);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+        grid-column-start:1;
+        grid-column-end:3;
+      }
+      /* Create a grid w/ a defined row start and end using two lines of code (one for start and one for stop) */
+      .grid-item4{
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0,0,0,0.8);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+        grid-row-start:2;
+        grid-row-end:4;
+      }
+      /* Create a grid that is aligned in the center of the container vertically */
+      /* create a grid where defined column start and stop is on one line instead of two */
+      .grid-item5{
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0,0,0,0.8);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+        grid-column: 3 / 4;
+        grid-row-start:0;
+        grid-row-end:1;
+      }
+      /* Grid w/ using span for number of columns */
+      .grid-item6{
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0,0,0,0.8);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+        grid-column-start:3;
+        grid-column-end: span 1;
+        grid-row-start:1;
+        grid-row-end:2;
+      }
+      
+      .grid-item7{
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0,0,0,0.8);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+        grid-column-start:3;
+        grid-column-end:4;
+        grid-row-start:2;
+        grid-row-end:3;
+      }
+      .grid-item8{
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0,0,0,0.8);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+        grid-column-start:3;
+        grid-column-end:4;
+        grid-row-start:3;
+        grid-row-end:4;
+      }
 
     </style>
 </head>
 <body>
-
-        <!-- Create a basic grid container with no gaps -->
-    
-
-
-        <!-- Create a grid with gaps -->
-
-
-
-        <!-- Create a grid w/ a defined column start and end using two lines of code (one for start and one for stop) -->
-        
-
-
-        <!-- Create a grid w/ a defined row start and end using two lines of code (one for start and one for stop) -->
-
-
-
-        <!-- Create a grid that is aligned in the center of the container vertically -->
-
-
-
-        <!-- create a grid where defined column start and stop is on one line instead of two -->
-
-
-       
-        <!-- Grid w/ using span for number of columns -->
-
-
-
-        <!-- Grid w/ another way to declare how many rows to go down-->
-
-
-
-
+      <div class="grid-container">
+          <div class="grid-item">Shirts</div>
+          <div class="grid-item">Boots</div>
+          <div class="grid-item">Gear</div>
+          <div class="grid-item">Pants</div>
+        </div>
+      <div class="grid-container2">
+          <div class="grid-item">Red</div>
+          <div class="grid-item">Purple</div>
+          <div class="grid-item">Green</div>
+          <div class="grid-item">Blue</div>
+          </div>
+      <div class="grid-container3">
+          <div class="grid-item3">Puppies</div>
+          <div class="grid-item">Bunnies</div>
+          <div class="grid-item3">Kittens</div>
+          <div class="grid-item">Hampsters</div>
+          </div>
+      <div class="grid-container4">
+          <div class="grid-item4">Rock</div>
+          <div class="grid-item">Tree</div>
+          <div class="grid-item4">Flower</div>
+          <div class="grid-item">Grass</div>
+          </div>
+      <div class="grid-container5">
+          <div class="grid-item5">1</div>
+          <div class="grid-item6">2</div>
+          <div class="grid-item7">3</div>
+          <div class="grid-item8">4</div>
+          </div>
     
 </body>
 </html>
